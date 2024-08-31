@@ -1,11 +1,11 @@
 const addInput= document.getElementById('input'); 
-const addẞtn = document.getElementById('btn');
+const addBtn = document.getElementById('btn');
 const taskListContainer= document.querySelector(".taskList");
 const tasklist= document.querySelector('.taskList ul');
 
 let todos = []
 
-addẞtn.addEventListener('click', function(e){
+addBtn.addEventListener('click', function(e){
 e.preventDefault();
 
 const taskText= addInput.value.trim();
@@ -17,6 +17,7 @@ console.log(todos);
 addInput.value ='';
 
 sessionStorage.setItem("todos", JSON.stringify(todos));
+updateTaskList()
 })
 
 //! Update Ul
